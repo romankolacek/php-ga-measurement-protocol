@@ -4,6 +4,7 @@ namespace TheIconic\Tracking\GoogleAnalytics\Parameters;
 
 use TheIconic\Tracking\GoogleAnalytics\Traits\Indexable;
 use IteratorAggregate;
+use ReturnTypeWillChange;
 
 /**
  * Class CompoundParameterCollection
@@ -45,6 +46,7 @@ abstract class CompoundParameterCollection implements IteratorAggregate
     /**
      * @inheritDoc
      */
+    #[ReturnTypeWillChange]
     public function add(CompoundParameter $compoundParameter)
     {
         $this->items[] = $compoundParameter;
