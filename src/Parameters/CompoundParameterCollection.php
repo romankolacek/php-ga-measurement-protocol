@@ -46,7 +46,6 @@ abstract class CompoundParameterCollection implements IteratorAggregate
     /**
      * @inheritDoc
      */
-    #[ReturnTypeWillChange]
     public function add(CompoundParameter $compoundParameter)
     {
         $this->items[] = $compoundParameter;
@@ -94,6 +93,7 @@ abstract class CompoundParameterCollection implements IteratorAggregate
      * @internal
      * @inheritDoc
      */
+    #[ReturnTypeWillChange]
     public function getIterator()
     {
         return new \ArrayIterator($this->items);
